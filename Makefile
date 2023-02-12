@@ -9,3 +9,5 @@ html:
 	$(foreach file, $(SOURCE), xsltproc $(XSLFILE) $(file) > $(TRGDIR)/$(notdir $(basename $(file))).html && xmllint --html --encode utf-8 --format $(TRGDIR)/$(notdir $(basename $(file))).html 1<> $(TRGDIR)/$(notdir $(basename $(file))).html;)
 clean:
 	rm $(TRGDIR)/*.html
+new:
+	cp template/default.docbook content/`./nnulidgen`.docbook

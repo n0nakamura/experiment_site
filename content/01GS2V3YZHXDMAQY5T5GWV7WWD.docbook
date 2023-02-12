@@ -2,29 +2,18 @@
 <?xml-model href="../schema/docbook.rng" type="application/xml"?>
 <article xmlns="http://docbook.org/ns/docbook"
       xmlns:xl="http://www.w3.org/1999/xlink"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
       version="5.0"
       xml:lang="en">
 <info>
-  <title>Website Test</title>
+  <title>2023-02-12</title>
   <author><personname><firstname>Noritoshi</firstname><surname>NAKAMURA</surname></personname></author>
   <copyright><year>2023</year><holder>Noritoshi NAKAMURA</holder></copyright>
-  <revhistory>
-    <revision>
-      <revnumber>0.1.0</revnumber>
-      <date>2023-02-12</date>
-      <revremark>Submitted.</revremark>
-    </revision>
-  </revhistory>
 </info>
 <warning><para>This is a temporary page.</para></warning>
 <section>
   <info>
-    <title>Section Title</title>
+    <title>What I did today...</title>
   </info>
-  <para>Hello, WWW!</para>
-  <itemizedlist>
-    <listitem><para><link xlink:href="01GS2V3YZHXDMAQY5T5GWV7WWD.html">2023-02-12</link></para></listitem>
-  </itemizedlist>
+  <para>I created a straightforward system for generating HTML from DocBook. Next, I aim to utilize GitHub Actions to generate HTML as well.</para>
 </section>
 </article>
