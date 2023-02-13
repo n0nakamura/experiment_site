@@ -6,7 +6,7 @@ TRGDIR := docs
 .PHONY: html clean
 
 html:
-	$(foreach file, $(SOURCE), xsltproc $(XSLFILE) $(file) > $(TRGDIR)/$(notdir $(basename $(file))).html && xmllint --html --encode utf-8 --format $(TRGDIR)/$(notdir $(basename $(file))).html 1<> $(TRGDIR)/$(notdir $(basename $(file))).html;)
+	$(foreach file, $(SOURCE), xsltproc $(XSLFILE) $(file) > $(TRGDIR)/$(notdir $(basename $(file))).html && xmllint --html --encode utf-8 --format $(TRGDIR)/$(notdir $(basename $(file))).html --output $(TRGDIR)/$(notdir $(basename $(file))).html;)
 clean:
 	rm $(TRGDIR)/*.html
 new:
