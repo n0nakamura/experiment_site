@@ -17,7 +17,16 @@
     <revision>
       <revnumber>0.1.0</revnumber>
       <date>2023-02-12</date>
-      <revremark>Submitted.</revremark>
+      <author><personname>n0nakamura</personname></author>
+      <revdescription>
+        <para>This is a revision description.</para>
+      </revdescription>
+    </revision>
+    <revision>
+      <revnumber>0.1.1</revnumber>
+      <date>2023-02-20</date>
+      <author><personname>n0nakamura</personname></author>
+      <revremark>Add features.</revremark>
     </revision>
   </revhistory>
 </info>
@@ -31,5 +40,22 @@
   <itemizedlist>
     <listitem><para><link xl:href="01GS2V3YZHXDMAQY5T5GWV7WWD.html">2023-02-12</link></para></listitem>
   </itemizedlist>
+
+  <segmentedlist><title>Prefecture Capitals</title>
+  <?dbhtml list-presentation="table"?>
+  <?dbfo   list-presentation="table"?>
+  <segtitle>Prefecture</segtitle>
+  <segtitle>Capital</segtitle>
+  <seglistitem><seg>Tokyo</seg><seg>Shinjuku</seg></seglistitem>
+  <seglistitem><seg>Kagawa</seg><seg>Takamatsu</seg></seglistitem>
+  <seglistitem><seg>Saitama</seg><seg>Ikebukuro</seg></seglistitem>
+  </segmentedlist>
+
+  <example xml:id="ex.helloworldinocaml">
+    <title>"Hello, World" in OCaml</title>
+    <programlisting>
+    print_string "Hello World\n";;
+    </programlisting>
+    </example>
 </section>
 </article>
