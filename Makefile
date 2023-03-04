@@ -1,9 +1,9 @@
-XSLFILE := /usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/docbook.xsl
+XSLFILE := /usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml5/docbook.xsl
 SRCDIR := content
 SOURCE := $(wildcard $(SRCDIR)/*.docbook)
 TRGDIR := docs
 
-.PHONY: html clean
+.PHONY: html clean new
 
 html:
 	$(foreach file, $(SOURCE), xsltproc $(XSLFILE) $(file) > $(TRGDIR)/$(notdir $(basename $(file))).html && xmllint --html --encode utf-8 --format $(TRGDIR)/$(notdir $(basename $(file))).html --output $(TRGDIR)/$(notdir $(basename $(file))).html;)
