@@ -6,56 +6,18 @@
       xml:lang="en">
 <info>
   <title>
-    <inlinemediaobject>
-      <imageobject><imagedata fileref="01GSH7D013HQPGGT11GD277EN2.png" width="50px" depth="50px" /></imageobject>
-    </inlinemediaobject>
-    Website Test
+    i6n26.com
   </title>
   <author><personname><firstname>Noritoshi</firstname><surname>NAKAMURA</surname></personname></author>
   <copyright><year>2023</year><holder>Noritoshi NAKAMURA</holder></copyright>
-  <revhistory>
-    <revision>
-      <revnumber>0.1.0</revnumber>
-      <date>2023-02-12</date>
-      <author><personname>n0nakamura</personname></author>
-      <revdescription>
-        <para>This is a revision description.</para>
-      </revdescription>
-    </revision>
-    <revision>
-      <revnumber>0.1.1</revnumber>
-      <date>2023-02-20</date>
-      <author><personname>n0nakamura</personname></author>
-      <revremark>Add features.</revremark>
-    </revision>
-  </revhistory>
 </info>
-<warning><para>This is a temporary page.</para></warning>
+<warning><para>ウェブサイトを試験的に運用しています．URIやページの内容は暫定的なものであり、事前に告知せずに内容の変更及び削除を行う場合があります．</para></warning>
 <section>
   <info>
-    <title>Section Title</title>
+    <title>Diary</title>
   </info>
-  <para>Hello, WWW!
-  </para>
   <itemizedlist>
     <listitem><para><link xl:href="01GS2V3YZHXDMAQY5T5GWV7WWD.html">2023-02-12</link></para></listitem>
   </itemizedlist>
-
-  <segmentedlist><title>Prefecture Capitals</title>
-  <?dbhtml list-presentation="table"?>
-  <?dbfo   list-presentation="table"?>
-  <segtitle>Prefecture</segtitle>
-  <segtitle>Capital</segtitle>
-  <seglistitem><seg>Tokyo</seg><seg>Shinjuku</seg></seglistitem>
-  <seglistitem><seg>Kagawa</seg><seg>Takamatsu</seg></seglistitem>
-  <seglistitem><seg>Saitama</seg><seg>Ikebukuro</seg></seglistitem>
-  </segmentedlist>
-
-  <example xml:id="ex.helloworldinocaml">
-    <title>"Hello, World" in OCaml</title>
-    <programlisting>
-    print_string "Hello World\n";;
-    </programlisting>
-    </example>
 </section>
 </article>

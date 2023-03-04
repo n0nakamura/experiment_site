@@ -9,11 +9,11 @@
   <author><personname><firstname>Noritoshi</firstname><surname>NAKAMURA</surname></personname></author>
   <copyright><year>2023</year><holder>Noritoshi NAKAMURA</holder></copyright>
 </info>
-<warning><para>This is a temporary page.</para></warning>
+<warning><para>ウェブサイトを試験的に運用しています．URIやページの内容は暫定的なものであり、事前に告知せずに内容の変更及び削除を行う場合があります．</para></warning>
 <section>
   <info>
-    <title>What I did today...</title>
+    <title>Website</title>
   </info>
-  <para>I created a straightforward system for generating HTML from DocBook. Next, I aim to utilize GitHub Actions to generate HTML as well.</para>
+  <para>DocBookからXHTML5へ変換する簡易的なシステムを作製した．</para>
 </section>
 </article>
