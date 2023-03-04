@@ -5,18 +5,16 @@
       version="5.0"
       xml:lang="en">
 <info>
-  <title>i6n26.com</title>
+  <title>2023-03-04</title>
   <author><personname><firstname>Noritoshi</firstname><surname>NAKAMURA</surname></personname></author>
   <copyright><year>2023</year><holder>Noritoshi NAKAMURA</holder></copyright>
 </info>
 <warning><para>ウェブサイトを試験的に運用しています．URIやページの内容は暫定的なものであり、事前に告知せずに内容の変更及び削除を行う場合があります．</para></warning>
 <section>
   <info>
-    <title>Diary</title>
+    <title>Website</title>
   </info>
-  <itemizedlist>
-    <listitem><para><link xl:href="01GS2V3YZHXDMAQY5T5GWV7WWD.html">2023-02-12</link></para></listitem>
-    <listitem><para><link xl:href="01GTNHK7PJ3KWEKHKXMQ086CBN.html">2023-03-04</link></para></listitem>
-  </itemizedlist>
+  <para>DocBook Websiteの存在を知ったので <link xl:href="https://tdg.docbook.org/tdg/website/5.2/">DocBook Website： The Definitive Guide</link> を流し読みした．
+  </para>
 </section>
 </article>
