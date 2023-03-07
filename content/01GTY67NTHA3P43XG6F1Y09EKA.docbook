@@ -5,24 +5,19 @@
       version="5.0"
       xml:lang="en">
 <info>
-  <title>i6n26.com</title>
+  <title><personname><firstname>Noritoshi</firstname><surname>NAKAMURA</surname></personname></title>
   <author><personname><firstname>Noritoshi</firstname><surname>NAKAMURA</surname></personname></author>
   <copyright><year>2023</year><holder>Noritoshi NAKAMURA</holder></copyright>
 </info>
 <warning><para>ウェブサイトを試験的に運用しています．ページのURIや内容は暫定的なものであり、事前に告知せずに内容の変更及び削除を行う場合があります．</para></warning>
 <section>
   <info>
-    <title>About</title>
-  </info>
-  <para><link xl:href="01GTY60Y0JTVMGEKE2TPNH34GV.html">このサイトについて</link></para>
-</section>
-<section>
-  <info>
-    <title>Diary</title>
+    <title>Link</title>
   </info>
   <itemizedlist>
-    <listitem><para><link xl:href="01GS2V3YZHXDMAQY5T5GWV7WWD.html">2023-02-12</link></para></listitem>
-    <listitem><para><link xl:href="01GTNHK7PJ3KWEKHKXMQ086CBN.html">2023-03-04</link></para></listitem>
+    <listitem><para><link xl:href="https://github.com/n0nakamura">GitHub</link></para></listitem>
+    <listitem><para><link xl:href="https://twitter.com/n0nakamura">Twitter</link></para></listitem>
+    <listitem><para><link xl:href="https://mastodon.social/@n0nakamura">Mastodon</link></para></listitem>
   </itemizedlist>
 </section>
 </article>
