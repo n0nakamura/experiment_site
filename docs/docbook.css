@@ -1,4 +1,12 @@
+body {
+  font-family: "Noto Sans JP", "メイリオ";
+  color: #e0e0e0;
+  background-color: #202020;
+}
 
+a {
+  color: #58a6ff;
+}
 
 /********************************/
 /* start of styles in block.xsl */
