@@ -20,7 +20,7 @@
        width="475.78821"
        height="227.59396"
        id="rect505" /></defs><rect
-     style="fill:#202020;stroke:none;stroke-width:0.671823"
+     style="fill:none;stroke:none;stroke-width:0.671823"
      id="background"
      width="1900"
      height="500"
@@ -28,7 +28,7 @@
      y="0" /><g
      id="icon"
      transform="scale(0.1)"><rect
-       style="opacity:1;fill:#202020;stroke:none;stroke-width:100.04"
+       style="opacity:1;fill:none;stroke:none;stroke-width:100.04"
        id="background-5"
        width="5000"
        height="5000"

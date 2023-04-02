@@ -1,11 +1,42 @@
 body {
   font-family: "Noto Sans JP", "メイリオ";
-  color: #e0e0e0;
-  background-color: #202020;
+  color: #ffffff;
+  background-color: #1b1b1b;
+  margin: 0;
+  padding: 0;
 }
-
+main {
+  margin: 8px;
+  padding: 8px;
+}
 a {
   color: #58a6ff;
+}
+
+/* Header */
+header {
+  background-color: #333333;
+}
+
+/* Comma Separeted List */
+.csl { 
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+.csl li {
+  display: inline;
+}
+.csl li:not(:last-of-type)::after {
+  content: ", ";
+}
+
+/* Table of Contents */
+.toc {
+  /* border: solid 1px #cccccc; */
+  background-color: #333333;
+  margin: 8px;
+  padding: 8px;
 }
 
 /********************************/
