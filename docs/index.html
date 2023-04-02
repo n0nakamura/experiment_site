@@ -49,10 +49,16 @@
   <main>
     <h1 class="title">Top Page</h1>
     <div class="metadata">
-      <div>Authored by Noritoshi NAKAMURA</div>
-      <div class="copyright">Copyright © 2023 Noritoshi NAKAMURA</div>
-      <div>Published at <time class="created" itemprop="dateCreated" datetime="2023-04-01">2023-04-01</time></div>
-      <div>Modified at <time class="modified" itemprop="dateModified" datetime="2023-04-02">2023-04-02</time></div>
+      <div>Authored by <a href="01GTY67NTHA3P43XG6F1Y09EKA">n0nakamura</a></div>
+      <div class="copyright">Copyright © 2023 n0nakamura</div>
+      <!-- 日時は自動的に挿入・更新される仕組みを作る． -->
+      <!-- 日時は秒まで扱う． -->
+      <div>Published at <time class="created" itemprop="dateCreated" datetime="2023-04-01">2023-04-01 00:00:00</time> </div>
+      <!-- Gitの更新履歴を参照させる． -->
+      <!-- Gitのコミットハッシュ値を事前に計算して特定コミットを参照するURLを作製する -->
+      <div>Modified at <a href="https://github.com/n0nakamura/experiment_site/commit/cf77cec9a4cbfaf07f7ce86729579a817b3dcb63"><time class="modified" itemprop="dateModified" datetime="2023-04-02">2023-04-02 00:00:00</time></a> (<a href="https://github.com/n0nakamura/experiment_site/commits/dev/docs/index.html">History</a>)</div>
+      <!-- 「タグがつけられたページの一覧」ページへリンクを張る．またこのページで、タグ同士の親子兄妹関係も定義する -->
+      <!-- 「タグがつけられたページの一覧」ページは、ウェブページ作成時のタグから動的に作製する． -->
       <div>Tags 
         <ul class="csl">
           <li><a href="">rhizobiales</a></li>
@@ -60,6 +66,7 @@
           <li><a href="">zymomonas</a></li>
         </ul>
       </div>
+      <!-- 内容の文脈を指定する．どのような事前知識に依存しているか、どのような続きがあるか． -->
       <div>Referenced by 
         <ul class="csl">
           <li><a href="">gramnegativebacteria</a></li>
@@ -72,14 +79,16 @@
       </div>
     </div>
     <hr />
+    <!-- Warningなどを組み込んで出力するシステム． -->
     <aside>
       <object data="01GVFWFQK4XTM3DJCMK45SDX70.html" border="1">利用不可</object> 
     </aside>
     <div class="toc">
       <h2 class="toctitle">Table of Contents</h2>
       <ul class="toccontents" itemprop="http://purl.org/dc/terms/tableOfContents">
-        <li><span class="section"><a href="#idp3">About</a></span></li>
-        <li><span class="section"><a href="#idp4">Diary</a></span></li>
+        <!-- TOCの参照先のIDはULIDとする． -->
+        <li><a href="#idp3">About</a></li>
+        <li><a href="#idp4">Diary</a></li>
       </ul>
     </div>
     <section class="section" id="idp3">
@@ -87,8 +96,8 @@
         <h2 class="title" style="clear: both">About</h2>
       </div>
       <ul>
-        <li><p><a class="ulink" href="01GTY60Y0JTVMGEKE2TPNH34GV" target="_top">このサイトについて</a></p></li>
-        <li><p><a class="ulink" href="01GVDHZ1JE4CY7TV7KNXC700NM" target="_top">利用規約/プライバシーポリシー</a></p></li>
+        <li><a class="ulink" href="01GTY60Y0JTVMGEKE2TPNH34GV" target="_top">このサイトについて</a></li>
+        <li><a class="ulink" href="01GVDHZ1JE4CY7TV7KNXC700NM" target="_top">利用規約/プライバシーポリシー</a></li>
       </ul>
     </section>
     <section class="section" id="idp4">
@@ -97,8 +106,8 @@
       </div>
       <div class="itemizedlist">
         <ul class="itemizedlist" style="list-style-type: disc; ">
-          <li class="listitem"><p><a class="ulink" href="01GS2V3YZHXDMAQY5T5GWV7WWD" target="_top">2023-02-12</a></p></li>
-          <li class="listitem"><p><a class="ulink" href="01GTNHK7PJ3KWEKHKXMQ086CBN" target="_top">2023-03-04</a></p></li>
+          <li class="listitem"><a class="ulink" href="01GS2V3YZHXDMAQY5T5GWV7WWD" target="_top">2023-02-12</a></li>
+          <li class="listitem"><a class="ulink" href="01GTNHK7PJ3KWEKHKXMQ086CBN" target="_top">2023-03-04</a></li>
         </ul>
       </div>
     </section>
