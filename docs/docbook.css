@@ -34,7 +34,7 @@ header {
 /* Table of Contents */
 .toc {
   /* border: solid 1px #cccccc; */
-  background-color: #333333;
+  background-color: rgba(128, 128, 128, 0.2);
   margin: 8px;
   padding: 8px;
 }
