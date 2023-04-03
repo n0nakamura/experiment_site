@@ -10,4 +10,5 @@ html:
 clean:
 	rm $(TRGDIR)/*.html
 new:
-	cp template/default.docbook content/`./nnulidgen`.docbook
+	# cp template/default.docbook content/`./nnulidgen`.docbook
+	cp template/default.adoc content/`./nnulidgen`.adoc
