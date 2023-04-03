@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  background-color: #1b1b1b;
+}
+main {
+  margin: 8px;
+  padding: 8px;
+}
+a {
+  color: #58a6ff;
+}
+/* Header */
+header {
+  background-color: #333333;
+}
+
+/* Comma Separated List */
+.csl {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.csl li {
+  display: inline;
+}
+.csl li:not(:last-of-type)::after {
+  content: ", ";
+}
+
+/* TOC */
+.toc {
+  background-color: rgba(128, 128, 128, 0.2);
+  margin: 8px;
+  padding: 8px;
+}
