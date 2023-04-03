@@ -5,7 +5,6 @@
 :sectnumlevels: 2
 :toc: auto
 :lang: ja
-:stem: latexmath
 :tabsize: 2
 :favicon: 01GSH7D013HQPGGT11GD277EN2.svg
 :stylesheet: style_asciidoctor.css
@@ -15,6 +14,11 @@
 :copyright: Copyright © 2023 n0nakamura
 :description: ブログの運用をどうするか．そもそもブログという記録活動はどういうものか．
 :keywords: ドメイン名, 終活
+
+[WARNING]
+====
+include::01GX2YHTCNZB241VGP2K2NDZ6A.adoc[]
+====
 
 ブログは記録の一種であり、記録はコミュニケーションの一種である．インターネットの資源や私の人生を無駄に消費しないためにも、ブログというコミュニケーションについて考えておこう、というそんなお話．
 
