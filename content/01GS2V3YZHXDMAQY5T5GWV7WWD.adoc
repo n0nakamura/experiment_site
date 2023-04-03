@@ -3,6 +3,7 @@
 :experimental:
 :sectnums: 
 :sectnumlevels: 2
+:sectlinks: 
 :toc: auto
 :lang: ja
 :tabsize: 2

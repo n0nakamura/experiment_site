@@ -3,9 +3,9 @@
 :experimental:
 :sectnums: 
 :sectnumlevels: 2
+:sectlinks: 
 :toc: auto
 :lang: ja
-:stem: latexmath
 :tabsize: 2
 :favicon: 01GSH7D013HQPGGT11GD277EN2.svg
 :stylesheet: style_asciidoctor.css
