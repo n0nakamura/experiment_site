@@ -1,0 +1,9 @@
+@import url('style_asciidoctor_orig.css');
+
+body {
+  color: #ffffff;
+  background-color: #1b1b1b;
+}
+a {
+  color: #58a6ff;
+}
