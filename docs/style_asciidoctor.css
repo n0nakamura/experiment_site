@@ -3,6 +3,7 @@
 body {
   color: #ffffff;
   background-color: #1b1b1b;
+  font-family:"Noto Sans JP",YuGothicM,Meiryo,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","sans-serif";
 }
 a {
   color: #58a6ff;
