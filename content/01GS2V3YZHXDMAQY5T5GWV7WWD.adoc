@@ -1,0 +1,59 @@
+= ブログの運用について - i6n26
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:toc: auto
+:lang: ja
+:stem: latexmath
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:author: n0nakamura
+:copyright: Copyright © 2023 n0nakamura
+:description: ブログの運用をどうするか．そもそもブログという記録活動はどういうものか．
+:keywords: ドメイン名, 終活
+
+ブログは記録の一種であり、記録はコミュニケーションの一種である．インターネットの資源や私の人生を無駄に消費しないためにも、ブログというコミュニケーションについて考えておこう、というそんなお話．
+
+[#01GX2K67HVEXGEZYMAD1X6JK7M]
+== 記録という行為
+
+記録という行為はコミュニケーションの一部であると考えられる．記録はどのようなコミュニケーションであるかを考察する．
+
+[#01GX2K5NDNGYGHA0R058EVF18V]
+=== 記録の露出欲求
+
+記録という行為は記録の露出欲求の程度によっても分類できる．例えばMastodonやMisskeyは投稿の公開範囲を調節することができる．連合しているサーバ先へ投稿を届けるときは ”Public”、フォロワーだけに投稿を届けるときは ”Followers”を選択することで、投稿のアクセス制御を行うことが可能だ．
+
+[#01GX2K4KX263CK278G0B5538EG]
+=== 記録の内容
+
+Twitterを泳いでいると次の投稿を目にすることがある．
+
+* ``#NowPlaying`` というハッシュタグをつけて現在聴いている音楽の曲名を投稿する．
+* Swarmと連携して現在居る場所を投稿する． ``I’m at <地名> swarmapp.com/user/…``．
+
+これらは即時的な記録であり、Twitterを初めとするマイクロブログは経時的な記録を残すのに向いている．
+
+[#01GX2K2BJCSZ7C1P5R6EDP321G]
+== ブログの種類
+
+<<01GX2K67HVEXGEZYMAD1X6JK7M>> にしたがってウェブ上で行われる記録活動を分類する．
+
+[#01GX2K357EMTPMFCX7SQC7NHKJ]
+== ブログの運用方法
+
+<<01GX2K67HVEXGEZYMAD1X6JK7M>> や <<01GX2K2BJCSZ7C1P5R6EDP321G>> にしたがって、私はどのようにブログを運用すればよいか考える．
+
+[#01GX2K3RF581M321FTX99TE88B]
+=== 私の記録行為について
+
+私は非公開で日記をつけている．その量はTwitter換算で年間17 kツイート{empty}footnote:[これは1日平均47ツイートであり、 link:https://koni.hateblo.jp/entry/2015/12/14/140124[日本 Twitter 廃人ランキング(beta)を公開しました！ - イケてる SaaS を作りたい (koni blog)] のツイート数と順位の関係によると、5,000位にすら達していない．]{empty}だ．この日記は私の外部記憶装置に相当する．
+
+[#01GX2KTCNJ7PQK26V4PJJGQAK]
+=== ドメイン名の設計
+
+``blog.example.com`` のようにサブドメインを ``blog`` としたウェブサイトを見たことがある．
