@@ -1,0 +1,34 @@
+= Gitのコミットハッシュ値を事前に求める - i6n26
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:sectlinks: 
+:toc: auto
+:lang: ja
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:author: n0nakamura
+:copyright: Copyright © 2023 n0nakamura
+:description: Gitのコミットハッシュ値を事前に求めたい．
+:keywords: git, commit hash
+
+[WARNING]
+====
+include::01GX2YHTCNZB241VGP2K2NDZ6A.adoc[]
+====
+
+== Gitのコミットメッセージとコミットの差分をウェブページの更新内容としたい
+
+ウェブページの更新内容を提示することは、ウェブページの信頼性の向上に繋がる．ウェブページをGitで管理しているならば、コミットメッセージとコミットの差分をウェブページの更新内容として利用することができるだろう．例えば次のリンク先ではトップページのあるコミットが示されている．
+
+https://github.com/n0nakamura/experiment_site/commit/da768f28cc78de3aaf7392309da03daf768cfcc1
+
+しかしこのURLのコミットハッシュ値 ``da768f28cc78de3aaf7392309da03daf768cfcc1`` はコミットする時に求まる．コミットハッシュ値を内包するリンクをウェブページに埋め込むためには、予めコミットハッシュ値を算出する必要がある．卵が先か鶏が先か．
+
+== Gitのコミットハッシュ値はどのように求まるか
+
+コミットハッシュ値の計算式は link:https://engineering.mercari.com/blog/entry/2016-02-08-173000/[Gitのコミットハッシュ値は何を元にどうやって生成されているのか ｜ メルカリエンジニアリング] に示されている．
