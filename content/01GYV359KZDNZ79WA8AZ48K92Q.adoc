@@ -16,6 +16,11 @@
 :description: 帝京大学に編入して経過した数週間を振り返る．
 :keywords: 帝京大学, 編入
 
+[WARNING]
+====
+include::01GX2YHTCNZB241VGP2K2NDZ6A.adoc[]
+====
+
 2023年度4月にlink:https://www.teikyo-u.ac.jp/faculties/correspondence[帝京大学 理工学部 情報科学科 通信教育過程]に3年次編入した．ここでは編入に至るまでの経緯と編入して経過した数週間を振り返る．
 
 == 帝京大学に編入したきっかけ
