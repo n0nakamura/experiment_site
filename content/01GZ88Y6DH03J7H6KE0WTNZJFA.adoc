@@ -1,0 +1,55 @@
+= 振動デバイスを用いた触覚による言語入力 - i6n26
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:sectlinks: 
+:toc: auto
+:lang: ja
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:author: n0nakamura
+:copyright: Copyright © 2023 n0nakamura
+:description: 点字などの触覚による情報入力について．
+:keywords: 体表点字
+
+[WARNING]
+====
+include::01GX2YHTCNZB241VGP2K2NDZ6A.adoc[]
+====
+
+ここでは筆者が「言語を認知・解釈する行為」の適切な表現を知らないため、「言語入力」と表している．
+
+== 異なるモダリティからの並列言語入力
+
+我々は、本を読みながらニュースを聞くなど、聴覚由来の言語入力と視覚由来の言語入力を並列して処理することができる．これに加え、触覚由来の言語入力があれば、より効果的に言語入力を行えると考えられる．
+
+触覚由来の言語入力で代表的なものに点字がある．しかし点字は手を用いて読む必要があり、キーボードの入力といったコンピュータの操作と相容れない．したがって、手の動作に干渉しない振動デバイスにより、触覚由来の言語入力を実現したい．
+
+== 先行事例・類似事例
+
+link:https://www.tel.co.jp/museum/magazine/news/270.html[メッセージを振動に変換し、皮膚で「読む」 ｜ Telescope Magazine] +
+link:https://fukuno.jig.jp/2186[体表点字で点字をスピーディーにラーニング！] +
+https://www.iieej.org/public/committees/vhis/confs/vhis6/vhis6-3.pdf +
+
+== 振動デバイスの数
+
+振動デバイスの数はそのままビット数に対応する．6点式点字は6ビットであり、64通りの表現が可能である．
+
+振動デバイスの数は次の制限を受ける．
+
+* 学習難易度
+* 2点弁別閾footnote:[link:https://www.kango-roo.com/learning/2411/[皮膚感覚｜感覚 ｜ 看護roo!［カンゴルー］]]
+
+ここでは、足趾に振動デバイスを割り当てた、10ビットの表現能をもつデバイスを検討する．
+
+== 符号化形式
+
+6点式点字を指に当てはめた方式として指点字がある．まずは指点字に倣ってデバイスを実装する．
+
+== 生体への影響
+
+* 足趾にどのような影響があるか
