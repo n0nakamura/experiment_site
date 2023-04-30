@@ -1,0 +1,22 @@
+= ⁢ - i6n26
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:sectlinks: 
+:toc: auto
+:lang: ja
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:author: n0nakamura
+:copyright: Copyright © 2023 n0nakamura
+:description: 
+:keywords: 
+
+[WARNING]
+====
+include::01GX2YHTCNZB241VGP2K2NDZ6A.adoc[]
+====
