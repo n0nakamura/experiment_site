@@ -20,3 +20,7 @@
 ====
 include::01GX2YHTCNZB241VGP2K2NDZ6A.adoc[]
 ====
+
+== 数学の記号について
+
+本記事のタイトルに使われた文字 U+2062 ``⁢`` はINVISIBLE TIMESと呼ばれる記号であるfootnote:[link:https://unicode-explorer.com/c/2062[⁢ U+2062 INVISIBLE TIMES - Unicode Explorer]]．
