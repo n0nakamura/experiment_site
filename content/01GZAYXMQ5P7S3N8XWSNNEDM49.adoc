@@ -1,0 +1,28 @@
+= MathML, OpenMath, OMDocなどの数学分野のマークアップ言語について - i6n26
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:sectlinks: 
+:toc: auto
+:lang: ja
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:author: n0nakamura
+:copyright: Copyright © 2023 n0nakamura
+:description: 
+:keywords: MathML, OpemMath, OMDoc
+
+[WARNING]
+====
+include::01GX2YHTCNZB241VGP2K2NDZ6A.adoc[]
+====
+
+== この記事が対象とするマークアップ言語について
+
+この記事では主にMathML, OpenMath, OMDocを対象とする．これは筆者が数学文書の視覚的表現にあまり関心を抱いていないためである．
+
+== MathML, OpenMath, OMDocそれぞれの立ち位置
