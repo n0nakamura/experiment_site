@@ -1,14 +1,16 @@
-XSLFILE := /usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml5/docbook.xsl
 SRCDIR := content
-SOURCE := $(wildcard $(SRCDIR)/*.docbook)
+SOURCE := $(wildcard $(SRCDIR)/*.adoc)
 TRGDIR := docs
 
-.PHONY: html clean new
 
+.PHONY: html
 html:
-	$(foreach file, $(SOURCE), xsltproc $(XSLFILE) $(file) > $(TRGDIR)/$(notdir $(basename $(file))).html && xmllint --html --encode utf-8 --format $(TRGDIR)/$(notdir $(basename $(file))).html --output $(TRGDIR)/$(notdir $(basename $(file))).html;)
+	$(foreach file, $(SOURCE), asciidoctor $(file) -o $(TRGDIR)/$(notdir $(basename $(file))).html && xmllint --encode utf-8 --format $(TRGDIR)/$(notdir $(basename $(file))).html --output $(TRGDIR)/$(notdir $(basename $(file))).html;)
+
+.PHONY: clean
 clean:
 	rm $(TRGDIR)/*.html
+
+.PHONY: new
 new:
-	# cp template/default.docbook content/`./nnulidgen`.docbook
 	cp template/default.adoc content/`./nnulidgen`.adoc
