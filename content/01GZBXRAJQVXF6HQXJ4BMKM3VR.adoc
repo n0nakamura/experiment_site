@@ -1,0 +1,24 @@
+= 補聴器, 人工内耳, 骨伝導補聴器などの総称 - i6n26
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:sectlinks: 
+:toc: auto
+:lang: ja
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:author: n0nakamura
+:copyright: Copyright © 2023 n0nakamura
+:description: 補聴器, 人工内耳, 骨伝導補聴器などの総称について考える．
+:keywords: 補聴器, 人工内耳, 骨伝導補聴器
+
+== 総称について
+
+[pass]
+++++
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">あなたが使用する、補聴器、骨伝導補聴器、人工内耳などの聴覚機能を補完・代替する用具の総称名はなんですか．</p>&mdash; n0nakamura (@n0nakamura) <a href="https://twitter.com/n0nakamura/status/1650349224779980800?ref_src=twsrc%5Etfw">April 24, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+++++
