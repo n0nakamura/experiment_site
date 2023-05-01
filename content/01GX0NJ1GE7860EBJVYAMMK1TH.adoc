@@ -1,4 +1,6 @@
 = ドメイン名の終活 - i6n26
+n0nakamura
+v0.0.1: draft
 :backend: xhtml5
 :experimental:
 :sectnums: 
@@ -11,7 +13,6 @@
 :stylesheet: style_asciidoctor.css
 :linkcss:
 :copycss:
-:author: n0nakamura
 :copyright: Copyright © 2023 n0nakamura
 :description: 
 :keywords: ドメイン名, 終活

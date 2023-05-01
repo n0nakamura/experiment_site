@@ -1,4 +1,6 @@
 = ドライアイに優しいパソコン環境 - i6n26
+n0nakamura
+v0.0.1: draft
 :backend: xhtml5
 :experimental:
 :sectnums: 
@@ -11,7 +13,6 @@
 :stylesheet: style_asciidoctor.css
 :linkcss:
 :copycss:
-:author: n0nakamura
 :copyright: Copyright © 2023 n0nakamura
 :description: ドライアイに悩まされている筆者が、目を閉じながらも入力することのできると期待している漢字直接入力や、スクリーンリーダーに手を染める話．
 :keywords: 漢字直接入力

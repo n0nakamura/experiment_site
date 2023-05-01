@@ -1,4 +1,6 @@
 = 帝京大学に3年次編入して - i6n26
+n0nakamura
+v0.0.1: draft
 :backend: xhtml5
 :experimental:
 :sectnums: 
@@ -11,7 +13,6 @@
 :stylesheet: style_asciidoctor.css
 :linkcss:
 :copycss:
-:author: n0nakamura
 :copyright: Copyright © 2023 n0nakamura
 :description: 帝京大学に編入して経過した数週間を振り返る．
 :keywords: 帝京大学, 編入
