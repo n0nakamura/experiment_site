@@ -1,169 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="generator" content="Asciidoctor 2.0.18"/>
-    <meta name="description" content="点字などの触覚による情報入力について．"/>
-    <meta name="keywords" content="体表点字"/>
-    <meta name="author" content="n0nakamura"/>
-    <meta name="copyright" content="Copyright © 2023 n0nakamura"/>
-    <link rel="icon" type="image/svg" href="01GSH7D013HQPGGT11GD277EN2.svg"/>
-    <title>振動デバイスを用いた触覚による言語入力 - i6n26</title>
-    <link rel="stylesheet" href="./style_asciidoctor.css"/>
-  </head>
-  <body class="article">
-    <div id="header">
-      <h1>振動デバイスを用いた触覚による言語入力 - i6n26</h1>
-      <div class="details">
-        <span id="author" class="author">n0nakamura</span>
-        <br/>
-        <span id="revnumber">version 0.0.1</span>
-        <br/>
-        <span id="revremark">draft</span>
-      </div>
-      <div id="toc" class="toc">
-        <div id="toctitle">Table of Contents</div>
-        <ul class="sectlevel1">
-          <li>
-            <a href="#_異なるモダリティからの並列言語入力">1. 異なるモダリティからの並列言語入力</a>
-          </li>
-          <li>
-            <a href="#_先行事例類似事例">2. 先行事例・類似事例</a>
-          </li>
-          <li>
-            <a href="#_振動デバイスの数">3. 振動デバイスの数</a>
-          </li>
-          <li>
-            <a href="#_符号化形式">4. 符号化形式</a>
-          </li>
-          <li>
-            <a href="#_生体への影響">5. 生体への影響</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div id="content">
-      <div id="preamble">
-        <div class="sectionbody">
-          <div class="admonitionblock warning">
-            <table>
-              <tr>
-                <td class="icon">
-                  <div class="title">Warning</div>
-                </td>
-                <td class="content">
-                  <div class="ulist">
-                    <ul>
-                      <li>
-                        <p>ウェブサイトを試験的に運用しています．ページのURIや内容は暫定的なものであり、事前に告知せずに内容の変更及び削除を行う場合があります．</p>
-                      </li>
-                      <li>
-                        <p>正確性・適切さは必ずしも保証できないため、利用者の自己責任で利用してください．</p>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div class="paragraph">
-            <p>ここでは筆者が「言語を認知・解釈する行為」の適切な表現を知らないため、「言語入力」と表している．</p>
-          </div>
-        </div>
-      </div>
-      <div class="sect1">
-        <h2 id="_異なるモダリティからの並列言語入力">
-          <a class="link" href="#_異なるモダリティからの並列言語入力">1. 異なるモダリティからの並列言語入力</a>
-        </h2>
-        <div class="sectionbody">
-          <div class="paragraph">
-            <p>我々は、本を読みながらニュースを聞くなど、聴覚由来の言語入力と視覚由来の言語入力を並列して処理することができる．これに加え、触覚由来の言語入力があれば、より効果的に言語入力を行えると考えられる．</p>
-          </div>
-          <div class="paragraph">
-            <p>触覚由来の言語入力で代表的なものに点字がある．しかし点字は手を用いて読む必要があり、キーボードの入力といったコンピュータの操作と相容れない．したがって、手の動作に干渉しない振動デバイスにより、触覚由来の言語入力を実現したい．</p>
-          </div>
-        </div>
-      </div>
-      <div class="sect1">
-        <h2 id="_先行事例類似事例">
-          <a class="link" href="#_先行事例類似事例">2. 先行事例・類似事例</a>
-        </h2>
-        <div class="sectionbody">
-          <div class="paragraph">
-            <p>
-              <a href="https://www.tel.co.jp/museum/magazine/news/270.html">メッセージを振動に変換し、皮膚で「読む」 ｜ Telescope Magazine</a>
-              <br/>
-              <a href="https://fukuno.jig.jp/2186">体表点字で点字をスピーディーにラーニング！</a>
-              <br/>
-              <a href="https://www.iieej.org/public/committees/vhis/confs/vhis6/vhis6-3.pdf" class="bare">https://www.iieej.org/public/committees/vhis/confs/vhis6/vhis6-3.pdf</a>
-              <br/>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="sect1">
-        <h2 id="_振動デバイスの数">
-          <a class="link" href="#_振動デバイスの数">3. 振動デバイスの数</a>
-        </h2>
-        <div class="sectionbody">
-          <div class="paragraph">
-            <p>振動デバイスの数はそのままビット数に対応する．6点式点字は6ビットであり、64通りの表現が可能である．</p>
-          </div>
-          <div class="paragraph">
-            <p>振動デバイスの数は次の制限を受ける．</p>
-          </div>
-          <div class="ulist">
-            <ul>
-              <li>
-                <p>学習難易度</p>
-              </li>
-              <li>
-                <p>2点弁別閾<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
-              </li>
-            </ul>
-          </div>
-          <div class="paragraph">
-            <p>ここでは、足趾に振動デバイスを割り当てた、10ビットの表現能をもつデバイスを検討する．</p>
-          </div>
-        </div>
-      </div>
-      <div class="sect1">
-        <h2 id="_符号化形式">
-          <a class="link" href="#_符号化形式">4. 符号化形式</a>
-        </h2>
-        <div class="sectionbody">
-          <div class="paragraph">
-            <p>6点式点字を指に当てはめた方式として指点字がある．まずは指点字に倣ってデバイスを実装する．</p>
-          </div>
-        </div>
-      </div>
-      <div class="sect1">
-        <h2 id="_生体への影響">
-          <a class="link" href="#_生体への影響">5. 生体への影響</a>
-        </h2>
-        <div class="sectionbody">
-          <div class="ulist">
-            <ul>
-              <li>
-                <p>足趾にどのような影響があるか</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="footnotes">
-      <hr/>
-      <div class="footnote" id="_footnotedef_1"><a href="#_footnoteref_1">1</a>. <a href="https://www.kango-roo.com/learning/2411/">皮膚感覚｜感覚 ｜ 看護roo!［カンゴルー］</a></div>
-    </div>
-    <div id="footer">
-      <div id="footer-text">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="generator" content="Asciidoctor 2.0.18"/>
+<meta name="description" content="点字などの触覚による情報入力について．"/>
+<meta name="keywords" content="体表点字"/>
+<meta name="author" content="n0nakamura"/>
+<meta name="copyright" content="Copyright © 2023 n0nakamura"/>
+<link rel="icon" type="image/svg" href="01GSH7D013HQPGGT11GD277EN2.svg"/>
+<title>振動デバイスを用いた触覚による言語入力 - i6n26</title>
+<link rel="stylesheet" href="./style_asciidoctor.css"/>
+</head>
+<body class="article">
+<div id="header">
+<h1>振動デバイスを用いた触覚による言語入力 - i6n26</h1>
+<div class="details">
+<span id="author" class="author">n0nakamura</span><br/>
+<span id="revnumber">version 0.0.1</span>
+<br/><span id="revremark">draft</span>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_異なるモダリティからの並列言語入力">1. 異なるモダリティからの並列言語入力</a></li>
+<li><a href="#_先行事例類似事例">2. 先行事例・類似事例</a></li>
+<li><a href="#_振動デバイスの数">3. 振動デバイスの数</a></li>
+<li><a href="#_符号化形式">4. 符号化形式</a></li>
+<li><a href="#_生体への影響">5. 生体への影響</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>ウェブサイトを試験的に運用しています．ページのURIや内容は暫定的なものであり、事前に告知せずに内容の変更及び削除を行う場合があります．</p>
+</li>
+<li>
+<p>正確性・適切さは必ずしも保証できないため、利用者の自己責任で利用してください．</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>ここでは筆者が「言語を認知・解釈する行為」の適切な表現を知らないため、「言語入力」と表している．</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_異なるモダリティからの並列言語入力"><a class="link" href="#_異なるモダリティからの並列言語入力">1. 異なるモダリティからの並列言語入力</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>我々は、本を読みながらニュースを聞くなど、聴覚由来の言語入力と視覚由来の言語入力を並列して処理することができる．これに加え、触覚由来の言語入力があれば、より効果的に言語入力を行えると考えられる．</p>
+</div>
+<div class="paragraph">
+<p>触覚由来の言語入力で代表的なものに点字がある．しかし点字は手を用いて読む必要があり、キーボードの入力といったコンピュータの操作と相容れない．したがって、手の動作に干渉しない振動デバイスにより、触覚由来の言語入力を実現したい．</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_先行事例類似事例"><a class="link" href="#_先行事例類似事例">2. 先行事例・類似事例</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://www.tel.co.jp/museum/magazine/news/270.html">メッセージを振動に変換し、皮膚で「読む」 ｜ Telescope Magazine</a><br/>
+<a href="https://fukuno.jig.jp/2186">体表点字で点字をスピーディーにラーニング！</a><br/>
+<a href="https://www.iieej.org/public/committees/vhis/confs/vhis6/vhis6-3.pdf" class="bare">https://www.iieej.org/public/committees/vhis/confs/vhis6/vhis6-3.pdf</a><br/></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_振動デバイスの数"><a class="link" href="#_振動デバイスの数">3. 振動デバイスの数</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>振動デバイスの数はそのままビット数に対応する．6点式点字は6ビットであり、64通りの表現が可能である．</p>
+</div>
+<div class="paragraph">
+<p>振動デバイスの数は次の制限を受ける．</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>学習難易度</p>
+</li>
+<li>
+<p>2点弁別閾<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>ここでは、足趾に振動デバイスを割り当てた、10ビットの表現能をもつデバイスを検討する．</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_符号化形式"><a class="link" href="#_符号化形式">4. 符号化形式</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>6点式点字を指に当てはめた方式として指点字がある．まずは指点字に倣ってデバイスを実装する．</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_生体への影響"><a class="link" href="#_生体への影響">5. 生体への影響</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>足趾にどのような影響があるか</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr/>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://www.kango-roo.com/learning/2411/">皮膚感覚｜感覚 ｜ 看護roo!［カンゴルー］</a>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
 Version 0.0.1<br/>
 Last updated 2023-05-01 15:36:31 +0900
 </div>
-    </div>
-  </body>
+</div>
+</body>
 </html>

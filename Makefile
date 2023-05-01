@@ -5,7 +5,7 @@ TRGDIR := docs
 
 .PHONY: html
 html:
-	$(foreach file, $(SOURCE), asciidoctor $(file) -o $(TRGDIR)/$(notdir $(basename $(file))).html && xmllint --encode utf-8 --format $(TRGDIR)/$(notdir $(basename $(file))).html --output $(TRGDIR)/$(notdir $(basename $(file))).html;)
+	$(foreach file, $(SOURCE), asciidoctor $(file) -o $(TRGDIR)/$(notdir $(basename $(file))).html;)
 
 .PHONY: clean
 clean:

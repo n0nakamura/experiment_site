@@ -1,101 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="generator" content="Asciidoctor 2.0.18"/>
-    <meta name="description" content="Gitのコミットハッシュ値を事前に求めたい．"/>
-    <meta name="keywords" content="git, commit hash"/>
-    <meta name="author" content="n0nakamura"/>
-    <meta name="copyright" content="Copyright © 2023 n0nakamura"/>
-    <link rel="icon" type="image/svg" href="01GSH7D013HQPGGT11GD277EN2.svg"/>
-    <title>Gitのコミットハッシュ値を事前に求める - i6n26</title>
-    <link rel="stylesheet" href="./style_asciidoctor.css"/>
-  </head>
-  <body class="article">
-    <div id="header">
-      <h1>Gitのコミットハッシュ値を事前に求める - i6n26</h1>
-      <div class="details">
-        <span id="author" class="author">n0nakamura</span>
-        <br/>
-        <span id="revnumber">version 0.0.1</span>
-        <br/>
-        <span id="revremark">draft</span>
-      </div>
-      <div id="toc" class="toc">
-        <div id="toctitle">Table of Contents</div>
-        <ul class="sectlevel1">
-          <li>
-            <a href="#_gitのコミットメッセージとコミットの差分をウェブページの更新内容としたい">1. Gitのコミットメッセージとコミットの差分をウェブページの更新内容としたい</a>
-          </li>
-          <li>
-            <a href="#_gitのコミットハッシュ値はどのように求まるか">2. Gitのコミットハッシュ値はどのように求まるか</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div id="content">
-      <div id="preamble">
-        <div class="sectionbody">
-          <div class="admonitionblock warning">
-            <table>
-              <tr>
-                <td class="icon">
-                  <div class="title">Warning</div>
-                </td>
-                <td class="content">
-                  <div class="ulist">
-                    <ul>
-                      <li>
-                        <p>ウェブサイトを試験的に運用しています．ページのURIや内容は暫定的なものであり、事前に告知せずに内容の変更及び削除を行う場合があります．</p>
-                      </li>
-                      <li>
-                        <p>正確性・適切さは必ずしも保証できないため、利用者の自己責任で利用してください．</p>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="sect1">
-        <h2 id="_gitのコミットメッセージとコミットの差分をウェブページの更新内容としたい">
-          <a class="link" href="#_gitのコミットメッセージとコミットの差分をウェブページの更新内容としたい">1. Gitのコミットメッセージとコミットの差分をウェブページの更新内容としたい</a>
-        </h2>
-        <div class="sectionbody">
-          <div class="paragraph">
-            <p>ウェブページの更新内容を提示することは、ウェブページの信頼性の向上に繋がる．ウェブページをGitで管理しているならば、コミットメッセージとコミットの差分をウェブページの更新内容として利用することができるだろう．例えば次のリンク先ではトップページのあるコミットが示されている．</p>
-          </div>
-          <div class="paragraph">
-            <p>
-              <a href="https://github.com/n0nakamura/experiment_site/commit/da768f28cc78de3aaf7392309da03daf768cfcc1" class="bare">https://github.com/n0nakamura/experiment_site/commit/da768f28cc78de3aaf7392309da03daf768cfcc1</a>
-            </p>
-          </div>
-          <div class="paragraph">
-            <p>しかしこのURLのコミットハッシュ値 <code>da768f28cc78de3aaf7392309da03daf768cfcc1</code> はコミットする時に求まる．コミットハッシュ値を内包するリンクをウェブページに埋め込むためには、予めコミットハッシュ値を算出する必要がある．卵が先か鶏が先か．</p>
-          </div>
-        </div>
-      </div>
-      <div class="sect1">
-        <h2 id="_gitのコミットハッシュ値はどのように求まるか">
-          <a class="link" href="#_gitのコミットハッシュ値はどのように求まるか">2. Gitのコミットハッシュ値はどのように求まるか</a>
-        </h2>
-        <div class="sectionbody">
-          <div class="paragraph">
-            <p>コミットハッシュ値の計算式は <a href="https://engineering.mercari.com/blog/entry/2016-02-08-173000/">Gitのコミットハッシュ値は何を元にどうやって生成されているのか ｜ メルカリエンジニアリング</a> に示されている．</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="footer">
-      <div id="footer-text">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="generator" content="Asciidoctor 2.0.18"/>
+<meta name="description" content="Gitのコミットハッシュ値を事前に求めたい．"/>
+<meta name="keywords" content="git, commit hash"/>
+<meta name="author" content="n0nakamura"/>
+<meta name="copyright" content="Copyright © 2023 n0nakamura"/>
+<link rel="icon" type="image/svg" href="01GSH7D013HQPGGT11GD277EN2.svg"/>
+<title>Gitのコミットハッシュ値を事前に求める - i6n26</title>
+<link rel="stylesheet" href="./style_asciidoctor.css"/>
+</head>
+<body class="article">
+<div id="header">
+<h1>Gitのコミットハッシュ値を事前に求める - i6n26</h1>
+<div class="details">
+<span id="author" class="author">n0nakamura</span><br/>
+<span id="revnumber">version 0.0.1</span>
+<br/><span id="revremark">draft</span>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_gitのコミットメッセージとコミットの差分をウェブページの更新内容としたい">1. Gitのコミットメッセージとコミットの差分をウェブページの更新内容としたい</a></li>
+<li><a href="#_gitのコミットハッシュ値はどのように求まるか">2. Gitのコミットハッシュ値はどのように求まるか</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>ウェブサイトを試験的に運用しています．ページのURIや内容は暫定的なものであり、事前に告知せずに内容の変更及び削除を行う場合があります．</p>
+</li>
+<li>
+<p>正確性・適切さは必ずしも保証できないため、利用者の自己責任で利用してください．</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gitのコミットメッセージとコミットの差分をウェブページの更新内容としたい"><a class="link" href="#_gitのコミットメッセージとコミットの差分をウェブページの更新内容としたい">1. Gitのコミットメッセージとコミットの差分をウェブページの更新内容としたい</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ウェブページの更新内容を提示することは、ウェブページの信頼性の向上に繋がる．ウェブページをGitで管理しているならば、コミットメッセージとコミットの差分をウェブページの更新内容として利用することができるだろう．例えば次のリンク先ではトップページのあるコミットが示されている．</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/n0nakamura/experiment_site/commit/da768f28cc78de3aaf7392309da03daf768cfcc1" class="bare">https://github.com/n0nakamura/experiment_site/commit/da768f28cc78de3aaf7392309da03daf768cfcc1</a></p>
+</div>
+<div class="paragraph">
+<p>しかしこのURLのコミットハッシュ値 <code>da768f28cc78de3aaf7392309da03daf768cfcc1</code> はコミットする時に求まる．コミットハッシュ値を内包するリンクをウェブページに埋め込むためには、予めコミットハッシュ値を算出する必要がある．卵が先か鶏が先か．</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gitのコミットハッシュ値はどのように求まるか"><a class="link" href="#_gitのコミットハッシュ値はどのように求まるか">2. Gitのコミットハッシュ値はどのように求まるか</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>コミットハッシュ値の計算式は <a href="https://engineering.mercari.com/blog/entry/2016-02-08-173000/">Gitのコミットハッシュ値は何を元にどうやって生成されているのか ｜ メルカリエンジニアリング</a> に示されている．</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
 Version 0.0.1<br/>
 Last updated 2023-05-01 15:36:42 +0900
 </div>
-    </div>
-  </body>
+</div>
+</body>
 </html>
