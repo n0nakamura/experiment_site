@@ -1,4 +1,6 @@
 = 補聴器, 人工内耳, 骨伝導補聴器などの総称 - i6n26
+n0nakamura
+v0.0.1: draft
 :backend: xhtml5
 :experimental:
 :sectnums: 
@@ -11,14 +13,25 @@
 :stylesheet: style_asciidoctor.css
 :linkcss:
 :copycss:
-:author: n0nakamura
 :copyright: Copyright © 2023 n0nakamura
 :description: 補聴器, 人工内耳, 骨伝導補聴器などの総称について考える．
 :keywords: 補聴器, 人工内耳, 骨伝導補聴器
 
 == 総称について
 
+公な文書を作成するとき、補聴器、人工内耳、骨伝導補聴器などの総称名を必要とする場面があります．私はこれまで、厚生労働省のウェブページで採用されている「補装具」に「聴覚」という修飾子を付与した、「聴覚補装具」という自作の総称名を用いてきました．最近、総称名について考える機会があったため、改めて総称名について考えたいと思います．
+
+== Twitterにおける総称名のアンケート
+
+Twitterでアンケートをとったところ、次の結果になりました．
+
 [pass]
 ++++
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">あなたが使用する、補聴器、骨伝導補聴器、人工内耳などの聴覚機能を補完・代替する用具の総称名はなんですか．</p>&mdash; n0nakamura (@n0nakamura) <a href="https://twitter.com/n0nakamura/status/1650349224779980800?ref_src=twsrc%5Etfw">April 24, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 ++++
+
+このアンケートでは、7名の方にご回答くださいました． ``補聴機器/補聴器機`` やその他の表現を採用しているようです．補装具に詳しくない一般の方々にも通じやすい「補聴機器」「補聴器機」といった表現が好ましい、といった意見もありました．
+
+== 聴覚以外の補装具
+
+== 海外における総称名
