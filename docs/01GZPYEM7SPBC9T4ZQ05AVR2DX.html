@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="generator" content="Asciidoctor 2.0.18"/>
+<meta name="description" content="VPSの一つ、WebARENAのサービスに関する記録。"/>
+<meta name="keywords" content="WebARENA, Indigo"/>
+<meta name="author" content="n0nakamura"/>
+<meta name="copyright" content="Copyright © 2023 n0nakamura"/>
+<link rel="icon" type="image/svg" href="01GSH7D013HQPGGT11GD277EN2.svg"/>
+<title>WebARENAの利用記録 - i6n26</title>
+<link rel="stylesheet" href="./style_asciidoctor.css"/>
+</head>
+<body class="article">
+<div id="header">
+<h1>WebARENAの利用記録 - i6n26</h1>
+<div class="details">
+<span id="author" class="author">n0nakamura</span><br/>
+<span id="revnumber">version 0.0.1</span>
+<br/><span id="revremark">draft</span>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_indigo">1. Indigo</a>
+<ul class="sectlevel2">
+<li><a href="#_vpsの選定">1.1. VPSの選定</a></li>
+<li><a href="#_料金">1.2. 料金</a></li>
+<li><a href="#_インスタンス">1.3. インスタンス</a></li>
+<li><a href="#_api">1.4. API</a></li>
+<li><a href="#_セキュリティ">1.5. セキュリティ</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_indigo"><a class="link" href="#_indigo">1. Indigo</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_vpsの選定"><a class="link" href="#_vpsの選定">1.1. VPSの選定</a></h3>
+<div class="paragraph">
+<p>ConoHaやSakuraのVPSと比べ、2023-05-06時点で72.2 %ほど安価であり、かつ機能が限られているため、初めてVPSを触るのに適していると判断した。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_料金"><a class="link" href="#_料金">1.2. 料金</a></h3>
+<div class="paragraph">
+<p>料金は公式のウェブページ<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>もしくは<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>に記載されている。</p>
+</div>
+<div class="paragraph">
+<p>2023年7月1日から価格が改定される<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>。およそ1.25 %ほど高くなる。</p>
+</div>
+<div class="paragraph">
+<p>なお、インスタンスを停止していても課金される。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_インスタンス"><a class="link" href="#_インスタンス">1.3. インスタンス</a></h3>
+<div class="paragraph">
+<p>インスタンスはインスタンス利用開始後45日から、その時点でのインスタンスの有無にかかわらず、インスタンスの上限数を25個に変更することができる。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_api"><a class="link" href="#_api">1.4. API</a></h3>
+<div class="paragraph">
+<p><a href="https://indigo.arena.ne.jp/userapi/">WebARENA Indigo API</a> に記載されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_セキュリティ"><a class="link" href="#_セキュリティ">1.5. セキュリティ</a></h3>
+<div class="paragraph">
+<p>次のウェブページを参考にセキュリティ対策をとる。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://en.wikipedia.org/wiki/Computer_security">Computer security - Wikipedia</a><br/>
+<a href="https://en.wikipedia.org/wiki/Hardening_(computing)">Hardening (computing) - Wikipedia</a><br/>
+<a href="https://wiki.ubuntu.com/Security/Features">Security/Features - Ubuntu Wiki</a><br/>
+<a href="https://wiki.debian.org/SecurityManagement">SecurityManagement - Debian Wiki</a><br/>
+<a href="https://wiki.debian.org/Hardening">Hardening - Debian Wiki</a><br/>
+<a href="https://wiki.archlinux.jp/index.php/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3">セキュリティ - ArchWiki</a><br/>
+<a href="https://wiki.gentoo.org/wiki/Security_Handbook">Security Handbook - Gentoo Wiki</a><br/>
+<a href="https://wiki.gentoo.org/wiki/Project:Hardened">Project：Hardened - Gentoo Wiki</a><br/>
+<a href="https://linuxsecurity.expert/checklists/linux-security-and-system-hardening">Linux security and system hardening checklist - Linux Security Expert</a><br/>
+<a href="https://madaidans-insecurities.github.io/guides/linux-hardening.html">Linux Hardening Guide ｜ Madaidan&#8217;s Insecurities</a><br/></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>rootユーザによるSSHログインの拒否。</p>
+</li>
+<li>
+<p>パスワード認証の拒否、認証鍵での認証に限定。</p>
+</li>
+<li>
+<p>SSHポート番号を22番から他の番号に変更。</p>
+</li>
+<li>
+<p>nftables, firewalldによるポートの制限。</p>
+</li>
+<li>
+<p>不要なサービスの停止。</p>
+</li>
+<li>
+<p>fail2ban, denyhostsなどによる不正アクセスの防御。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr/>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://web.arena.ne.jp/indigo/price/">WebARENA Indigo（VPS）の料金（Linux） ｜ VPS（仮想専用サーバー）はWebARENA Indigo</a>
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. <a href="https://web.arena.ne.jp/pdf/Indigo_Agreement.pdf">&lt; VP-9-8 2022.4 &gt; NTTPC Communications, Inc. WebARENA Indigo 利用規約</a>
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. <a href="https://web.arena.ne.jp/news/2023/0330.html">「WebARENAサービス」価格改定のご案内（2023年7月1日～） ｜ 公式 WebARENA(ウェブアリーナ) ｜ レンタルサーバー,VPS,クラウド,メールサーバー, 専用サーバー,データセンター</a>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 0.0.1<br/>
+Last updated 2023-05-06 11:38:18 +0900
+</div>
+</div>
+</body>
+</html>
