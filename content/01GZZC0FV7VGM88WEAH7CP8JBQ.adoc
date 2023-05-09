@@ -1,0 +1,37 @@
+= 日本語音声の高音質化 - i6n26
+n0nakamura
+v0.0.1: draft
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:sectlinks: 
+:toc: auto
+:lang: ja
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:copyright: Copyright © 2023 n0nakamura
+:description: 聞き取りやすい音声であることは、聞き取りへの意識の負荷を軽減し、音声文字化の精度を向上させる。低音質な音声を高音質な音声に変換する技術を探る。
+:keywords: 音声, 高音質化
+
+== 聞き取りやすい音声とは
+
+聞き取りやすい音声とは、次の条件を備えるものをいう。
+
+* 明瞭で正確な発音
+* 適切な音量
+* 適切なテンポ
+* メリハリがある
+
+聞き取りやすい音声の考察を深めるため、アナウンサーの発声に注目していきたい。
+
+== 聞き取りやすい音声と聞き取りにくい音声の比較
+
+現代はYouTuberなどの配信者の存在が一般化しつつあり、配信者ごとに聞き取りやすさを比較することが容易になった。ここでは、ある配信者をとりあげて、音声の特徴の差異を探る。
+
+== 音声の高音質化
+
+映像分野では、 link:https://ai.googleblog.com/2021/07/high-fidelity-image-generation-using.html[High Fidelity Image Generation Using Diffusion Models – Google AI Blog] のように、低解像度の画像から高解像度の画像へ変換するモデルがある。同様に、低音質の日本語音声を高音質の日本語音声に変換するモデルを考えることができる。ここでは、既存の研究事例を探り、実際に応用することを考える。
