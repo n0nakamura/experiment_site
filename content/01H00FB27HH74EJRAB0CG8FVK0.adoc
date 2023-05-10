@@ -1,0 +1,35 @@
+= Zsh Line Editorのメモ - i6n26
+n0nakamura
+v0.0.1: draft
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:sectlinks: 
+:toc: auto
+:lang: ja
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:copyright: Copyright © 2023 n0nakamura
+:description: 
+:keywords: zsh, ZLE
+
+== ZLEとは
+
+ZLEはコマンドラインに入力されたバッファを操作する機能である。BashにおけるReadlineに相当する。ZLEモジュールに関係する3つの組み込みコマンドを次に示す。
+
+* ``vared``: シェルパラメタの値でZLEを起動する。
+* ``zle``: editing widgetを操作し、シェル関数内からZLEコマンドへのコマンドラインのアクセスを可能にする。
+* ``bindkey``: キーマップとキーバインディングを操作する。Zキーバインディングとウィジェットを関係づける役割を担う。
+
+作製したシェル関数を組み込みコマンド ``zle`` によりZLEウィジェットに登録し、 ``bindkey`` によりキーバインディングとZLEウィジェットを紐づけることで、コマンドラインバッファを操作する。
+
+== 参考文献
+
+link:https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html[zsh： 18 Zsh Line Editor] +
+link:https://man.archlinux.org/man/extra/zsh/zshzle.1.en[zshzle(1) — Arch manual pages] +
+link:https://dev.classmethod.jp/articles/zsh-zle-introduction/[Macがzshになるなら、ZLEを習得するっきゃない！ ｜ DevelopersIO] +
+link:https://man.archlinux.org/man/zshparam.1.en[zshparam(1) — Arch manual pages] +
