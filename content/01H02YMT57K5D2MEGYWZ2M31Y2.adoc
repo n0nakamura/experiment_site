@@ -1,0 +1,27 @@
+= DICTプロトコル, dictdを触ってみる - i6n26
+n0nakamura
+v0.0.1: draft
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:sectlinks: 
+:toc: auto
+:lang: ja
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:copyright: Copyright © 2023 n0nakamura
+:description: DICTプロトコルやdictdを用いて辞書環境を構築する。
+:keywords: DICT, dictd
+
+== 辞書に関してやりたいこと
+
+私は辞書に次の機能を追加したいと考えている。
+
+* ある単語を検索した回数の記録。
+* ある単語へのコメントの追加。
+* ウェブページ上の語句を辞書で検索したとき、このウェブページのURIを該当語句と紐づける。
+* IMEの辞書と相互運用。
