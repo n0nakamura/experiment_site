@@ -54,6 +54,7 @@ link:https://wiki.gentoo.org/wiki/Security_Handbook[Security Handbook - Gentoo W
 link:https://wiki.gentoo.org/wiki/Project:Hardened[Project：Hardened - Gentoo Wiki] +
 link:https://linuxsecurity.expert/checklists/linux-security-and-system-hardening[Linux security and system hardening checklist - Linux Security Expert] +
 link:https://madaidans-insecurities.github.io/guides/linux-hardening.html[Linux Hardening Guide ｜ Madaidan's Insecurities] +
+link:https://qiita.com/tomoyamachi/items/e9fba17caa0021acc60f[セキュリティで知っておきたい基礎用語集/リンク集 - Qiita] +
 
 * rootユーザによるSSHログインの拒否。
 * パスワード認証の拒否、認証鍵での認証に限定。
