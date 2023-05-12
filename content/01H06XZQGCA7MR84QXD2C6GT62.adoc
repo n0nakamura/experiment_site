@@ -1,0 +1,41 @@
+= relayerを用いたNostrリレーの実装 - i6n26
+n0nakamura
+v0.0.1: draft
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:sectlinks: 
+:toc: auto
+:lang: ja
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:copyright: Copyright © 2023 n0nakamura
+:description: Go言語で書かれたNostrのリレーサーバのフレームワーク relayer を用いて、リレーを実装する。
+:keywords: nostr, リレー, relayer
+
+== はじめに
+
+Nostrのリレーのフレームワークrelayerを用いてNostrのリレーをGo言語で実装する。既にrelayerを用いた実装があるため、これらも参照する。
+
+link:https://github.com/mattn/nostr-relay[mattn/nostr-relay： nostr relay] +
+link:https://github.com/rubiojr/snr[rubiojr/snr： Simple Nostr relay server] +
+
+== relayerに関係するパッケージ
+
+=== Context
+
+並列処理におけるリクエストの管理に関わるパッケージという理解。
+
+=== github.com/gorilla/websocket
+
+== 参考文献
+
+link:https://go.dev/ref/spec[The Go Programming Language Specification - The Go Programming Language] +
+link:https://pkg.go.dev/std[Standard library - Go Packages] +
+
+link:https://zenn.dev/hsaki/books/golang-context[よくわかるcontextの使い方] +
+link:https://free-engineer.life/golang-context/[【Go言語】Contextを理解したいんじゃ！！ - フリエン生活] +
