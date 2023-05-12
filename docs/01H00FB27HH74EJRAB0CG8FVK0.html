@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="generator" content="Asciidoctor 2.0.18"/>
+<meta name="description" content=""/>
+<meta name="keywords" content="zsh, ZLE"/>
+<meta name="author" content="n0nakamura"/>
+<meta name="copyright" content="Copyright © 2023 n0nakamura"/>
+<link rel="icon" type="image/svg" href="01GSH7D013HQPGGT11GD277EN2.svg"/>
+<title>Zsh Line Editorのメモ - i6n26</title>
+<link rel="stylesheet" href="./style_asciidoctor.css"/>
+</head>
+<body class="article">
+<div id="header">
+<h1>Zsh Line Editorのメモ - i6n26</h1>
+<div class="details">
+<span id="author" class="author">n0nakamura</span><br/>
+<span id="revnumber">version 0.0.1</span>
+<br/><span id="revremark">draft</span>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_zleとは">1. ZLEとは</a></li>
+<li><a href="#_参考文献">2. 参考文献</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_zleとは"><a class="link" href="#_zleとは">1. ZLEとは</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ZLEはコマンドラインに入力されたバッファを操作する機能である。BashにおけるReadlineに相当する。ZLEモジュールに関係する3つの組み込みコマンドを次に示す。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>vared</code>: シェルパラメタの値でZLEを起動する。</p>
+</li>
+<li>
+<p><code>zle</code>: editing widgetを操作し、シェル関数内からZLEコマンドへのコマンドラインのアクセスを可能にする。</p>
+</li>
+<li>
+<p><code>bindkey</code>: キーマップとキーバインディングを操作する。Zキーバインディングとウィジェットを関係づける役割を担う。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>作製したシェル関数を組み込みコマンド <code>zle</code> によりZLEウィジェットに登録し、 <code>bindkey</code> によりキーバインディングとZLEウィジェットを紐づけることで、コマンドラインバッファを操作する。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_参考文献"><a class="link" href="#_参考文献">2. 参考文献</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html">zsh： 18 Zsh Line Editor</a><br/>
+<a href="https://man.archlinux.org/man/extra/zsh/zshzle.1.en">zshzle(1) — Arch manual pages</a><br/>
+<a href="https://dev.classmethod.jp/articles/zsh-zle-introduction/">Macがzshになるなら、ZLEを習得するっきゃない！ ｜ DevelopersIO</a><br/>
+<a href="https://man.archlinux.org/man/zshparam.1.en">zshparam(1) — Arch manual pages</a><br/></p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 0.0.1<br/>
+Last updated 2023-05-10 22:46:55 +0900
+</div>
+</div>
+</body>
+</html>
