@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="generator" content="Asciidoctor 2.0.18"/>
+<meta name="description" content="dotfilesを構成していった過程を述べる。"/>
+<meta name="keywords" content="dotfiles"/>
+<meta name="author" content="n0nakamura"/>
+<meta name="copyright" content="Copyright © 2023 n0nakamura"/>
+<link rel="icon" type="image/svg" href="01GSH7D013HQPGGT11GD277EN2.svg"/>
+<title>n0nakamuraのdotfiles - i6n26</title>
+<link rel="stylesheet" href="./style_asciidoctor.css"/>
+</head>
+<body class="article">
+<div id="header">
+<h1>n0nakamuraのdotfiles - i6n26</h1>
+<div class="details">
+<span id="author" class="author">n0nakamura</span><br/>
+<span id="revnumber">version 0.0.1</span>
+<br/><span id="revremark">draft</span>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_dotfilesの設計方針">1. dotfilesの設計方針</a></li>
+<li><a href="#_参考">2. 参考</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>これまで、Makeを用いる方法、Stowを用いる方法でdotfilesを管理してきた。しかし、これらは導入に手間がかかるため、ワンライナーで完了するよう改めてdotfilesの構成を見直した。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dotfilesの設計方針"><a class="link" href="#_dotfilesの設計方針">1. dotfilesの設計方針</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>どの環境からもone commandでdotfilesを導入したい。手動でGitHubから <code>git clone</code> し、インストールスクリプトを実行するというのが、よくあるdotfilesの導入方法だが、これは予め<code>git</code> をインストールする必要があり、また最低3コマンド程の実行が必要になる。これでは腱鞘炎になる。そこで次のコマンドを叩くだけで、dotfilesの導入が完了するようにした。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-console" data-lang="console">curl https://nnin.i6n26.com | sh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>curl <a href="https://nnin.i6n26.com" class="bare">https://nnin.i6n26.com</a></code> すればわかるように、単純に次のコマンド群を実行しているだけである。cURLやtarはどの環境にも標準で備わっていることが多いため再現性が高い。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-console" data-lang="console">mkdir dotfiles
+curl --proto '=https' --tlsv1.2 -sSfL https://github.com/n0nakamura/dotfiles/tarball/main |\
+  tar -xz -C dotfiles --strip-components 1
+sh dotfiles/bootstrap.sh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>実際のインストール処理は <code>dotfiles/bootstrap.sh</code> に記述されている。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_参考"><a class="link" href="#_参考">2. 参考</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>私のdotfilesの設計はb4b4r07氏に大きく影響を受けている。なお、残念なことに現在はb4b4r07氏の各資料が削除されているため閲覧できない。</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 0.0.1<br/>
+Last updated 2023-05-14 07:47:56 UTC
+</div>
+</div>
+</body>
+</html>

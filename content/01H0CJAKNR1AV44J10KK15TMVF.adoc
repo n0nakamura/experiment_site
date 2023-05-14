@@ -1,0 +1,45 @@
+= n0nakamuraのdotfiles - i6n26
+n0nakamura
+v0.0.1: draft
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:sectlinks: 
+:toc: auto
+:lang: ja
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:copyright: Copyright © 2023 n0nakamura
+:description: dotfilesを構成していった過程を述べる。
+:keywords: dotfiles
+
+これまで、Makeを用いる方法、Stowを用いる方法でdotfilesを管理してきた。しかし、これらは導入に手間がかかるため、ワンライナーで完了するよう改めてdotfilesの構成を見直した。
+
+== dotfilesの設計方針
+
+どの環境からもone commandでdotfilesを導入したい。手動でGitHubから ``git clone`` し、インストールスクリプトを実行するというのが、よくあるdotfilesの導入方法だが、これは予め``git`` をインストールする必要があり、また最低3コマンド程の実行が必要になる。これでは腱鞘炎になる。そこで次のコマンドを叩くだけで、dotfilesの導入が完了するようにした。
+
+[source, console]
+----
+curl https://nnin.i6n26.com | sh
+----
+
+``curl https://nnin.i6n26.com`` すればわかるように、単純に次のコマンド群を実行しているだけである。cURLやtarはどの環境にも標準で備わっていることが多いため再現性が高い。
+
+[source, console]
+----
+mkdir dotfiles
+curl --proto '=https' --tlsv1.2 -sSfL https://github.com/n0nakamura/dotfiles/tarball/main |\
+  tar -xz -C dotfiles --strip-components 1
+sh dotfiles/bootstrap.sh
+----
+
+実際のインストール処理は ``dotfiles/bootstrap.sh`` に記述されている。
+
+== 参考
+
+私のdotfilesの設計はb4b4r07氏に大きく影響を受けている。なお、残念なことに現在はb4b4r07氏の各資料が削除されているため閲覧できない。
