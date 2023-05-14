@@ -1,0 +1,11 @@
+= www.i6n26.com
+
+== Dockerを用いたAsciidoctorの利用
+
+GemやBundlerを利用した管理は環境破壊につながる恐れがあるためコンテナを利用する。
+
+[source, console]
+----
+docker pull asciidoctor/docker-asciidoctor
+docker container run --rm --entrypoint="make" --name "asciidoctor" -it --volume `pwd`:/documents asciidoctor/docker-asciidoctor "html"
+----
