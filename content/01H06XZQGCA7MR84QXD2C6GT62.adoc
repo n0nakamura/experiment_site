@@ -1,4 +1,4 @@
-= relayerを用いたNostrリレーの実装 - i6n26
+= relayerを用いたNostrテスト用リレーの実装 - i6n26
 n0nakamura
 v0.0.1: draft
 :backend: xhtml5
@@ -14,7 +14,7 @@ v0.0.1: draft
 :linkcss:
 :copycss:
 :copyright: Copyright © 2023 n0nakamura
-:description: Go言語で書かれたNostrのリレーサーバのフレームワーク relayer を用いて、リレーを実装する。
+:description: Go言語で書かれたNostrのリレーサーバのフレームワーク relayer を用いて、テスト用リレーを実装する。
 :keywords: nostr, リレー, relayer
 
 == はじめに
@@ -24,11 +24,25 @@ Nostrのリレーのフレームワークrelayerを用いてNostrのリレーを
 link:https://github.com/mattn/nostr-relay[mattn/nostr-relay： nostr relay] +
 link:https://github.com/rubiojr/snr[rubiojr/snr： Simple Nostr relay server] +
 
+なお、nostr-relayをDockerで動かすにはリポジトリをクローンした後、次のコマンドを実行する。
+
+[source, console]
+----
+docker build -t nostr-relay .
+docker run -d -p 7447:7447 --name nostr-relay-container nostr-relay
+----
+
 == relayerに関係するパッケージ
 
 === Context
 
 並列処理におけるリクエストの管理に関わるパッケージという理解。
+
+=== github.com/nbd-wtf/go-nostr
+
+Go言語におけるNostrのライブラリ。
+
+=== github.com/kelseyhightower/envconfig
 
 === github.com/gorilla/websocket
 
