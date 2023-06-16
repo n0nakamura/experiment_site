@@ -1,0 +1,44 @@
+= Yodogawa-Jankenの製作記録 - i6n26
+n0nakamura
+v0.0.1: draft
+:backend: xhtml5
+:experimental:
+:sectnums: 
+:sectnumlevels: 2
+:sectlinks: 
+:toc: auto
+:lang: ja
+:tabsize: 2
+:favicon: 01GSH7D013HQPGGT11GD277EN2.svg
+:stylesheet: style_asciidoctor.css
+:linkcss:
+:copycss:
+:copyright: Copyright © 2023 n0nakamura
+:description: Yodogawa-JankenとはNostr上で動作するBotの1つである。どのようにしてBotを作製していったかを語る。
+:keywords: Nostr じゃんけん
+
+link:https://github.com/n0nakamura/yodogawa-janken[Yodogawa-Janken] とはNostrのBotの1つである。基本的な機能として、手札をYodogawa-Jankenへメンションすると、Yodogawa-Jankenの手札と勝敗を返すプログラムである。このBotを製作した過程を以下に述べる。
+
+== 製作のきっかけ
+
+製作のきっかけは、2023年5月16日に投稿されたあおぎさんによる淀川さんのグー・チョキ・パーのイラスト (link:https://snort.social/e/nevent1qqsf7hnmta0m2d3xxm4gfm5ulfnwx93s757akthewkdc96ne9vz6f0qprpmhxue69uhkummnw3ezu6r0d3ukyetp9e3k7mf0qgs2c89dwl8xy0ej8pwp4czelhj5zcmcdrxtsxunfqssadztzxayl8grqsqqqqqplmlkuv[あおぎ - 淀川さんの手のイラストはこちらから自由に使ってください - Snort]) である。以前からNostrに関する何らかの開発をしたいと考えており、またじゃんけんのCLIプログラムはC言語で書いたことがあるため、じゃんけん機能を備えたBotを作製することにした。この頃は絵文字への対応は全く検討していなかった。
+
+== プロトタイプの作製
+
+単純なじゃんけんではつまらないため各手札の出現確率が一様にならないよう設定した。淀川さんの自撮りから、最も自然な手の状態がパー、続いてチョキ、最後にグーであると判断したため、それぞれ37%, 32%, 26%の割合で出現するようにした。かつ、ごく稀にYodogawa-sanが無条件で勝利する機能を加えた。この物語の主人公はYodogawa-sanである。スーパーマリオブラザーズにスーパースターがあるように、Yodogawa-sanにも無敵状態があるのだ。
+
+開発環境の導入容易度と言語の学習難易度の面から、Go言語を使用することにした。まずはじゃんけんをCLIアプリケーションとして実装し (link:https://github.com/n0nakamura/yodogawa-janken/commit/8bed4c660ad1a23692b86be374ad49759ba9c7af[Prototype rock-paper-scissors program running on the CLI · n0nakamura/yodogawa-janken@8bed4c6]) 、想定通りの動作をすることが確認できた。5月17日の出来事である。あとは入出力をNostrリレーとの通信に置換するだけであるが、実際に利用できるようになるまで1ヶ月かかった。
+
+== ライブラリgo-nostr
+
+Go言語にもNostrのライブラリ go-nostr (link:https://github.com/nbd-wtf/go-nostr[nbd-wtf/go-nostr： Nostr library for Golang]) がある。go-nostrのExamplesを参考に、リレーの購読と投稿だけを行うプログラムを書いた。mattnさんのnostr-makeitquote (link:https://github.com/mattn/nostr-makeitquote[mattn/nostr-makeitquote]) は非常に参考にさせていただいた。
+
+== 絵文字の対応
+
+それまで手札を表す文字はアルファベット ``R``, ``S``, ``P`` のみであった。
+
+ふと、手の絵文字があると手札が視覚的に理解しやすいと思い、手札の表記に絵文字を加えた。また、これに合わせて誤って絵文字でメンションをするユーザが生じることが予想されたため、絵文字にも反応するようにした (link:https://github.com/n0nakamura/yodogawa-janken/commit/82cf73f1058f79d0a0966227005d97af9c59baab[Add emoji supports · n0nakamura/yodogawa-janken@82cf73f])。しかし、アルファベットの入力に比べ絵文字の入力は手間がかかるため、あくまでオプショナルな機能であった。
+
+絵文字対応に本格的に乗り出した発端は、にこさんのメンションの絵文字 ``✋`` である。Yodogawa-Jankenにおけるパーの絵文字は ``🖐`` であったが、類似する絵文字に ``✋`` があった。混乱を防ぐため、 ``✋`` もパーとして扱うことにした (link:https://snort.social/e/nevent1qqsvdlwwm7mlwffngzcmxqzkz0rq6a6cstsdwf5rvm7407rmzr57wscpz4mhxue69uhhyetvv9ujuerpd46hxtnfduhsz8thwden5te0dehhxarj9e3xjarrda5kuetj9eek7cmfv9kz7fez3vg[n0nakamura - 実は🖐と✋があって、Yodogawa-Jankenが採用しているのは前者。紛らわしいので両方対応します。 - Snort])。
+
+Nostrのユーザの特徴を一言で形容するなら「好奇心旺盛」だろう。彼らは設定されていない絵文字をYodogawa-Jankenに投げかけるのである。未知を求める彼らに対し、私は絵文字を追加し続けた  (link:https://github.com/n0nakamura/yodogawa-janken/commit/8f9c6932c783d4bb99eb2ad5401b05f50dbc37e7[Add corresponding emojis and response patterns · n0nakamura/yodogawa-janken@8f9c693], etc...)。
