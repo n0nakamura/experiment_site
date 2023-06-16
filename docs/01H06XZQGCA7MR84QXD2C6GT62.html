@@ -5,17 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="generator" content="Asciidoctor 2.0.18"/>
-<meta name="description" content="Go言語で書かれたNostrのリレーサーバのフレームワーク relayer を用いて、リレーを実装する。"/>
+<meta name="description" content="Go言語で書かれたNostrのリレーサーバのフレームワーク relayer を用いて、テスト用リレーを実装する。"/>
 <meta name="keywords" content="nostr, リレー, relayer"/>
 <meta name="author" content="n0nakamura"/>
 <meta name="copyright" content="Copyright © 2023 n0nakamura"/>
 <link rel="icon" type="image/svg" href="01GSH7D013HQPGGT11GD277EN2.svg"/>
-<title>relayerを用いたNostrリレーの実装 - i6n26</title>
+<title>relayerを用いたNostrテスト用リレーの実装 - i6n26</title>
 <link rel="stylesheet" href="./style_asciidoctor.css"/>
 </head>
 <body class="article">
 <div id="header">
-<h1>relayerを用いたNostrリレーの実装 - i6n26</h1>
+<h1>relayerを用いたNostrテスト用リレーの実装 - i6n26</h1>
 <div class="details">
 <span id="author" class="author">n0nakamura</span><br/>
 <span id="revnumber">version 0.0.1</span>
@@ -28,7 +28,9 @@
 <li><a href="#_relayerに関係するパッケージ">2. relayerに関係するパッケージ</a>
 <ul class="sectlevel2">
 <li><a href="#_context">2.1. Context</a></li>
-<li><a href="#_github_comgorillawebsocket">2.2. github.com/gorilla/websocket</a></li>
+<li><a href="#_github_comnbd_wtfgo_nostr">2.2. github.com/nbd-wtf/go-nostr</a></li>
+<li><a href="#_github_comkelseyhightowerenvconfig">2.3. github.com/kelseyhightower/envconfig</a></li>
+<li><a href="#_github_comgorillawebsocket">2.4. github.com/gorilla/websocket</a></li>
 </ul>
 </li>
 <li><a href="#_参考文献">3. 参考文献</a></li>
@@ -46,6 +48,15 @@
 <p><a href="https://github.com/mattn/nostr-relay">mattn/nostr-relay： nostr relay</a><br/>
 <a href="https://github.com/rubiojr/snr">rubiojr/snr： Simple Nostr relay server</a><br/></p>
 </div>
+<div class="paragraph">
+<p>なお、nostr-relayをDockerで動かすにはリポジトリをクローンした後、次のコマンドを実行する。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-console" data-lang="console">docker build -t nostr-relay .
+docker run -d -p 7447:7447 --name nostr-relay-container nostr-relay</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -58,7 +69,17 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_github_comgorillawebsocket"><a class="link" href="#_github_comgorillawebsocket">2.2. github.com/gorilla/websocket</a></h3>
+<h3 id="_github_comnbd_wtfgo_nostr"><a class="link" href="#_github_comnbd_wtfgo_nostr">2.2. github.com/nbd-wtf/go-nostr</a></h3>
+<div class="paragraph">
+<p>Go言語におけるNostrのライブラリ。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_github_comkelseyhightowerenvconfig"><a class="link" href="#_github_comkelseyhightowerenvconfig">2.3. github.com/kelseyhightower/envconfig</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_github_comgorillawebsocket"><a class="link" href="#_github_comgorillawebsocket">2.4. github.com/gorilla/websocket</a></h3>
 
 </div>
 </div>
@@ -80,7 +101,7 @@
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1<br/>
-Last updated 2023-05-12 04:38:13 UTC
+Last updated 2023-06-16 02:01:43 UTC
 </div>
 </div>
 </body>
