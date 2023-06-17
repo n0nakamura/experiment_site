@@ -18,7 +18,7 @@
 <h1>Yodogawa-Jankenの製作記録 - i6n26</h1>
 <div class="details">
 <span id="author" class="author">n0nakamura</span><br/>
-<span id="revnumber">version 0.0.1</span>
+<span id="revnumber">version 0.0.2</span>
 <br/><span id="revremark">draft</span>
 </div>
 <div id="toc" class="toc">
@@ -28,6 +28,11 @@
 <li><a href="#_プロトタイプの作製">2. プロトタイプの作製</a></li>
 <li><a href="#_ライブラリgo_nostr">3. ライブラリgo-nostr</a></li>
 <li><a href="#_絵文字の対応">4. 絵文字の対応</a></li>
+<li><a href="#_プログラムの構成の見直し">5. プログラムの構成の見直し</a>
+<ul class="sectlevel2">
+<li><a href="#_現状">5.1. 現状</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -83,11 +88,90 @@
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_プログラムの構成の見直し"><a class="link" href="#_プログラムの構成の見直し">5. プログラムの構成の見直し</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_現状"><a class="link" href="#_現状">5.1. 現状</a></h3>
+<div class="paragraph">
+<p>v0.0.5の時点でプログラムのリファクタリングが必要だと感じた。まずはv0.0.5のプログラムの流れを述べる。</p>
+</div>
+<div class="paragraph">
+<p>Yodogawa-Jankenの秘密鍵 (Bech32形式) は <code>config.json</code> に記載されており、ここから16進数の秘密鍵と公開鍵を導出する。これらの鍵は次の関数で利用される。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>func subscribeEvent(sk string, pub string, pevc chan *nostr.Event) error</code>: リレーからのイベントの購読を担う</p>
+</li>
+<li>
+<p><code>func postReply(sk string, pub string, pevc chan *nostr.Event) error</code>: リレーへのイベントの投稿を担う関数</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>関数 <code>subscribeEvent</code> と関数 <code>postReply</code> を並行に処理しつつ、チャンネルを介して関数 <code>subscribeEvent</code> から関数 <code>postReply</code> へ取得したイベントを送信する。 この流れを次の図に示した。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="01H34BDCKHD9FX8XB8W6XYQS57.png" alt="Overall view of the process"/>
+</div>
+</div>
+<div class="paragraph">
+<p>じゃんけんの処理は関数 <code>postReply</code> 内で行う。具体的には次の関数を呼び出して実行する。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>func getPlayerHand(playerHand string) (Hand, error) </code>: プレイヤーの手の同定を行う関数</p>
+</li>
+<li>
+<p><code>func biasJanken() Hand </code>: Yodogawa-sanの手を返す関数</p>
+</li>
+<li>
+<p><code>func doJanken(playerHand Hand, yodogawaHand Hand) Outcome </code>: じゃんけんの勝敗を返す関数</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>手の型 <code>Hand</code> を、また結果の型 <code>Outcome</code> を次のように定義する。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-go" data-lang="go">type Hand uint
+
+const (
+  ROCK Hand = iota // グー
+  SCISSORS         // チョキ
+  PAPER            // パー
+  INVINCIBLE       // 無敵
+  HLOVE            // LOVE
+  HHANDSHAKE       // 握手
+  OTHER            // その他手の絵文字
+)
+
+type Outcome uint
+
+const (
+  WIN Outcome = iota // 勝利
+  LOSE               // 敗北
+  DRAW               // 引き分け
+  LOVE               // LOVE
+  HANDSHAKE          // 握手
+)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>このプログラムの大きな問題点は、じゃんけんの処理内で、じゃんけんとは無関係の処理を行っているところにある。既存のじゃんけんのシステムを流用して絵文字へ対応したために、この問題が生じた。今後、ランキングの表示や対人戦, Yodogawa-Jankenの学習といった要素を加える上で、じゃんけんのシステムとそれ以外のシステムを分ける必要がある。</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 0.0.1<br/>
-Last updated 2023-06-16 02:01:43 UTC
+Version 0.0.2<br/>
+Last updated 2023-06-17 11:08:13 UTC
 </div>
 </div>
 </body>

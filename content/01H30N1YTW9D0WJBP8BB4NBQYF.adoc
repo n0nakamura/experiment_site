@@ -1,6 +1,6 @@
 = Yodogawa-Jankenの製作記録 - i6n26
 n0nakamura
-v0.0.1: draft
+v0.0.2: draft
 :backend: xhtml5
 :experimental:
 :sectnums: 
@@ -42,3 +42,53 @@ Go言語にもNostrのライブラリ go-nostr (link:https://github.com/nbd-wtf/
 絵文字対応に本格的に乗り出した発端は、にこさんのメンションの絵文字 ``✋`` である。Yodogawa-Jankenにおけるパーの絵文字は ``🖐`` であったが、類似する絵文字に ``✋`` があった。混乱を防ぐため、 ``✋`` もパーとして扱うことにした (link:https://snort.social/e/nevent1qqsvdlwwm7mlwffngzcmxqzkz0rq6a6cstsdwf5rvm7407rmzr57wscpz4mhxue69uhhyetvv9ujuerpd46hxtnfduhsz8thwden5te0dehhxarj9e3xjarrda5kuetj9eek7cmfv9kz7fez3vg[n0nakamura - 実は🖐と✋があって、Yodogawa-Jankenが採用しているのは前者。紛らわしいので両方対応します。 - Snort])。
 
 Nostrのユーザの特徴を一言で形容するなら「好奇心旺盛」だろう。彼らは設定されていない絵文字をYodogawa-Jankenに投げかけるのである。未知を求める彼らに対し、私は絵文字を追加し続けた  (link:https://github.com/n0nakamura/yodogawa-janken/commit/8f9c6932c783d4bb99eb2ad5401b05f50dbc37e7[Add corresponding emojis and response patterns · n0nakamura/yodogawa-janken@8f9c693], etc...)。
+
+== プログラムの構成の見直し
+
+=== 現状
+
+v0.0.5の時点でプログラムのリファクタリングが必要だと感じた。まずはv0.0.5のプログラムの流れを述べる。
+
+Yodogawa-Jankenの秘密鍵 (Bech32形式) は ``config.json`` に記載されており、ここから16進数の秘密鍵と公開鍵を導出する。これらの鍵は次の関数で利用される。
+
+* ``func subscribeEvent(sk string, pub string, pevc chan *nostr.Event) error``: リレーからのイベントの購読を担う
+* ``func postReply(sk string, pub string, pevc chan *nostr.Event) error``: リレーへのイベントの投稿を担う関数
+
+関数 ``subscribeEvent`` と関数 ``postReply`` を並行に処理しつつ、チャンネルを介して関数 ``subscribeEvent`` から関数 ``postReply`` へ取得したイベントを送信する。 この流れを次の図に示した。
+
+image::01H34BDCKHD9FX8XB8W6XYQS57.png[Overall view of the process]
+
+じゃんけんの処理は関数 ``postReply`` 内で行う。具体的には次の関数を呼び出して実行する。
+
+* ``func getPlayerHand(playerHand string) (Hand, error) ``: プレイヤーの手の同定を行う関数 
+* ``func biasJanken() Hand ``: Yodogawa-sanの手を返す関数
+* ``func doJanken(playerHand Hand, yodogawaHand Hand) Outcome ``: じゃんけんの勝敗を返す関数
+
+手の型 ``Hand`` を、また結果の型 ``Outcome`` を次のように定義する。
+
+[source, go]
+----
+type Hand uint
+
+const (
+	ROCK Hand = iota // グー
+	SCISSORS         // チョキ
+	PAPER            // パー
+	INVINCIBLE       // 無敵
+	HLOVE            // LOVE
+	HHANDSHAKE       // 握手
+	OTHER            // その他手の絵文字
+)
+
+type Outcome uint
+
+const (
+	WIN Outcome = iota // 勝利
+	LOSE               // 敗北
+	DRAW               // 引き分け
+	LOVE               // LOVE
+	HANDSHAKE          // 握手
+)
+----
+
+このプログラムの大きな問題点は、じゃんけんの処理内で、じゃんけんとは無関係の処理を行っているところにある。既存のじゃんけんのシステムを流用して絵文字へ対応したために、この問題が生じた。今後、ランキングの表示や対人戦, Yodogawa-Jankenの学習といった要素を加える上で、じゃんけんのシステムとそれ以外のシステムを分ける必要がある。
