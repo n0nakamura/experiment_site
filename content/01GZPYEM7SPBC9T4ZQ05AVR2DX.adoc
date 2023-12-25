@@ -25,7 +25,7 @@ ConoHaやSakuraのVPSと比べ、2023-05-06時点で72.2 %ほど安価であり�
 
 === 料金
 
-料金は公式のウェブページfootnote:[link:https://web.arena.ne.jp/indigo/price/[WebARENA Indigo（VPS）の料金（Linux） ｜ VPS（仮想専用サーバー）はWebARENA Indigo]]もしくはfootnote:[link:https://web.arena.ne.jp/pdf/Indigo_Agreement.pdf[< VP-9-8 2022.4 > NTTPC Communications, Inc.
+料金は時間従量制であり、月額上限料金が定められている。公式のウェブページfootnote:[link:https://web.arena.ne.jp/indigo/price/[WebARENA Indigo（VPS）の料金（Linux） ｜ VPS（仮想専用サーバー）はWebARENA Indigo]]もしくはfootnote:[link:https://web.arena.ne.jp/pdf/Indigo_Agreement.pdf[< VP-9-8 2022.4 > NTTPC Communications, Inc.
 WebARENA Indigo 利用規約]]に記載されている。
 
 2023年7月1日から価格が改定されるfootnote:[link:https://web.arena.ne.jp/news/2023/0330.html[「WebARENAサービス」価格改定のご案内（2023年7月1日～） ｜ 公式 WebARENA(ウェブアリーナ) ｜ レンタルサーバー,VPS,クラウド,メールサーバー, 専用サーバー,データセンター]]。およそ1.25 %ほど高くなる。
